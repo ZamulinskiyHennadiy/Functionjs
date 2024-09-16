@@ -1,0 +1,17 @@
+body{
+  width: 350px;
+}
+
+ul>li{
+  list-style: none;
+}
+
+p{
+  background-color: #bdb1b1c3;
+  width: 300px;
+}
+
+h1{
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <title>FunctionJS</title>
+</head>
+
+<body>
+  <h1>Види функції</h1>
+  <ul>
+    <li>
+      <h3>Оголошення функції</h3>
+      <p>function myFunction() {
+        }</p>
+    </li>
+    <li>
+      <h3>Функціональний вираз</h3>
+      <p>const myFunction = function() {
+        };</p>
+    </li>
+    <li>
+      <h3>Стрілкова функція</h3>
+      <p>const myFunction = () => {
+        };</p>
+    </li>
+    <li>
+      <h3>Анонімна функція</h3>
+      <p>setTimeout(function() {
+        }, 1000);</p>
+    </li>
+    <li>
+      <h3>Самовиконувана функція</h3>
+      <p>(function() {
+        })();</p>
+    </li>
+    <li>
+      <h3>Метод об'єкта: Функція, яка є методом об'єкта.</h3>
+      <p>const obj = {
+        myMethod: function() {
+        }
+        };</p>
+    </li>
+    <li>
+      <h3>Генератор функцій: Функція, що може зупинятись і продовжувати виконання.</h3>
+      <p>function* myGenerator() {
+        yield 1;
+        yield 2;
+        }
+      </p>
+    </li>
+  </ul>
+
+  <script>
+
+    //Створюю функцію, яка буде виводити кількість переданих їй аргументів.
+    function countArguments(...args) {
+      console.log(arguments.length);
+
+      countArguments(5, 6, 7, 8);
+    }
+  </script>
+
+  <script>
+    
+    //Пишу функцію, яка приймає 2 числа і повертає :
+    function compareNumbers(a, b) {
+      if (a < b) {
+        return -1;
+      } else if (a < b) {
+        return 1;
+      } else {
+        return 0;
+      }
+    }
+    console.log(compareNumbers(5, 10));
+  </script>
+
+  <script>
+    //Пишу функцію, яка обчислює факторіал переданого їй числа.
+    function mergeDigits(a, b, c) {
+      return parseInt(`${a}${b}${c}`);
+    }
+    console.log(mergeDigits(5, 8, 10));
+  </script>
+
+  <script>
+    
+    //Пишу функцію, яка приймає довжину і ширину прямокутника і обчислює його площу.
+    function calculateArea(length, width = length) {
+      return length * width;
+    }
+    console.log(calculateArea(5,30,));
+  </script>
+</body>
+
+</html>
